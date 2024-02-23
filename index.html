@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vn">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link href="./output.css" rel="stylesheet">
+		<style>
+			.popup.active{
+				transform: translate(-50%,100px);
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper flex items-center justify-center h-[100vh] bg-red-100 text-white">
+			<div
+				class="wheel relative w-[512px] h-[512px] bg-red-200 shadow-2xl border-8 border-white rounded-full overflow-hidden">
+				<div class="wheel-inner relative w-[500px] h-[500px] rounded-full overflow-hidden"
+					style="transition: cubic-bezier(0.19, 1, 0.22, 1) 5s;transform: rotate(0deg);">
+					<div class="absolute w-[0] h-[0] top-[0] left-[50%] transfrom -translate-x-[50%] origin-[50%_100%] rotate-[0deg]"
+						style="border-left: 144px solid transparent;border-right: 144px solid transparent;border-top: 250px solid #16a085;">
+					</div>
+					<div class="absolute w-[0] h-[0] top-[0] left-[50%] transfrom -translate-x-[50%] origin-[50%_100%] rotate-[60deg]"
+						style="border-left: 144px solid transparent;border-right: 144px solid transparent;border-top: 250px solid #2980b9;">
+					</div>
+					<div class="absolute w-[0] h-[0] top-[0] left-[50%] transfrom -translate-x-[50%] origin-[50%_100%] rotate-[120deg]"
+						style="border-left: 144px solid transparent;border-right: 144px solid transparent;border-top: 250px solid #34495e;">
+					</div>
+					<div class="absolute w-[0] h-[0] top-[0] left-[50%] transfrom -translate-x-[50%] origin-[50%_100%] rotate-[180deg]"
+						style="border-left: 144px solid transparent;border-right: 144px solid transparent;border-top: 250px solid #f39c12;">
+					</div>
+					<div class="absolute w-[0] h-[0] top-[0] left-[50%] transfrom -translate-x-[50%] origin-[50%_100%] rotate-[240deg]"
+						style="border-left: 144px solid transparent;border-right: 144px solid transparent;border-top: 250px solid #d35400;">
+					</div>
+					<div class="absolute w-[0] h-[0] top-[0] left-[50%] transfrom -translate-x-[50%] origin-[50%_100%] rotate-[300deg]"
+						style="border-left: 144px solid transparent;border-right: 144px solid transparent;border-top: 250px solid #c0392b;">
+					</div>
+				</div>
+				<div
+					class="absolute w-[50px] h-[50px] top-[50%] left-[50%] transfrom -translate-x-[50%] -translate-y-[50%] z-10">
+					<div
+						class="wheel-button cursor-pointer absolute w-[100%] h-[100%] rounded-full border-8 border-[#EF4444] bg-white rounded-full">
+						<div class="flex items-center justify-center h-[100%]">
+							<span class="w-[10px] h-[10px] rounded-full border-2 border-[#EF4444]"></span>
+						</div>
+					</div>
+					<span
+						class="absolute bottom-[100%] left-[50%] w-[0] h-[0] transfrom -translate-x-[50%] translate-y-[50%]"
+						style="border-left: 15px solid transparent;border-right: 15px solid transparent;border-bottom: 15px solid #EF4444;"></span>
+				</div>
+			</div>
+			<div class="popup fixed w-[30vw] top-[0] left-[50%] bg-white transfrom translate-y-[-100px] -translate-x-[50%] shadow-2xl py-2 px-5 flex flex-col items-center"
+				style="transition: all 0.5s;">
+				<div class="popup__container">
+					<div class="popup__emotion">
+						<i class="fas fa-meh"></i>
+					</div>
+					<p class="popup__note text-center text-black"></p>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
